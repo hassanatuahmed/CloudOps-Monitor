@@ -1,0 +1,13 @@
+{
+  "name": "cloudops-monitor",
+  "version": "1.0.0",
+  "description": "Containerized Express service for a DevOps CI/CD assessment",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "check": "node --check src/app.js && node --check src/server.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "express": "^4.21.2" }
+}

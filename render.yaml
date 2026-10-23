@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: cloudops-monitor
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_NAME
+        value: CloudOps Monitor
+      - key: APP_VERSION
+        value: 1.0.0
